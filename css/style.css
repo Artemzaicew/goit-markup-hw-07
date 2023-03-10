@@ -93,6 +93,11 @@ span {
     .container {
         max-width: 1158px;
     } 
+
+    .section {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
 }
 
 @media screen and (max-width:767px) {
@@ -394,11 +399,25 @@ span {
     background-image: linear-gradient( to right, 
     rgba(46, 47, 66, 0.7),
     rgba(46, 47, 66, 0.7)),
-    url(../images/people-office.jpg);
+    url(../images/480/hero/hero-480_1x.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
+
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+screen and (min-resolution: 192dpi) and (max-width: 767px),
+screen and (min-resolution: 2dppx) and (max-width: 767px) {
+    .hero {
+        background-image: linear-gradient( to right, 
+    rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)),
+    url(../images/480/hero/hero-480_2x.jpg);
+    }
+}
+        
+    
+
 
 .hero-title {
     color: var(--white-color);
@@ -453,7 +472,7 @@ span {
         background-image: linear-gradient( to right, 
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)),
-        url(../images/people-office.jpg);
+        url(../images/768/hero/hero-768_1x.jpg);
     }
 
     .hero-title {
@@ -463,6 +482,18 @@ span {
         max-width: 496px;
     }
 }
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+screen and (min-resolution: 192dpi) and (min-width: 768px),
+screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    .hero {
+        background-image: linear-gradient( to right, 
+    rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)),
+    url(../images/768/hero/hero-768_2x.jpg);
+    }
+}
+
 
 
 /* ADAPTIV DESCTOP HERO */
@@ -480,6 +511,17 @@ span {
 
     .hero-title {
         margin-bottom: 48px;
+    }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+screen and (min-resolution: 192dpi) and (min-width: 1200px),
+screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+    .hero {
+        background-image: linear-gradient( to right, 
+    rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)),
+    url(../images/1200/hero/people-office-1200_2x.jpg);
     }
 }
 
@@ -607,6 +649,13 @@ span {
 
 
 /* _______ADAPTIV SECTION JOB______________ */
+
+@media screen and (min-width: 1200px) {
+    .section.job {
+        padding-top: 0;
+        padding-bottom: 120px;
+    }  
+}
 
 @media screen and (max-width: 1199px) {
     .section.job {
