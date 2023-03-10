@@ -160,14 +160,19 @@ span {
     }
     .mobile-menu-container {
         position: relative;
-        padding-top: 40px;
-        padding-left: 40px;
-        padding-bottom: 40px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: auto;
+        margin-right: auto;
 
         width: 100%;
+        max-width: 428px;
         height: 100%;
         display: flex;
         flex-direction: column;
+
+        top: 0;
+        transform: translate(-50%, 0) scale(100%);
     }
     .mobile-menu-close {
         position: absolute;
@@ -267,6 +272,9 @@ span {
     }
 
     .mobile-menu-content .actions {
+        max-width: 328px;
+        display: flex;
+        justify-content: space-between;
         max-width: 328px;
     }
 }
@@ -826,7 +834,7 @@ screen and (min-resolution: 2dppx) and (min-width: 1200px) {
     flex-wrap: wrap;
     column-gap: 16px;
     row-gap: 72px;
-    margin: 0 auto;
+    
 }
 
 /* .customers {
