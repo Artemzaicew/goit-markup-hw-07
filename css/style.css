@@ -785,10 +785,12 @@ span {
 } */
 
 .customers h2 {
-    text-align: center;
     margin-top: 0;
     margin-bottom: 72px;
     font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+ 
 }
 
 .logo {
@@ -822,15 +824,58 @@ span {
     border: 1px solid var(--card-bg-color-hover);
 } 
 
-/* footer */
+
+/* ADAPTIV TABLET CUSTOMERS */
+
+@media screen and (min-width: 768px) {
+    .customers .container {
+        max-width: 582px;
+    }
+}
+
+
+/* ADAPTIV DESCTOP CUSTOMERS */
+
+@media screen and (min-width: 1200px) {
+    .customers .container {
+        max-width: 1158px;
+    }
+}
+
+
+
+/* ____________ADAPTIV SECTION CUSTOMERS______________ */
+
+/* ADAPTIV MOBILE FOOTTER*/
+
+.footer .container {
+    max-width: 428px;
+}
+
+.footer .info, 
+.footer .media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.group .info {
+    margin-bottom: 72px;
+}
+
+footer .media {
+    height: 80px;
+    margin-bottom: 72px;
+}
+    
+
 .footer {
     color: var(--footer-text-color);
     background-color: var(--primary-text-color);
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
-/* logo footer */
 .footer .logo-footer {
     color: var(--section-team-bcg-color);
     font-family: 'Raleway',sans-serif;
@@ -845,25 +890,17 @@ span {
     line-height: 1.5;
 }
 
-/* list actions footer */
-.group {
-    display: flex;
-}
-
-.group .info {
-    margin-right: 120px;
-}
-
-.media {
-    width: 208px;
-    height: 80px;
-    margin-right: 80px;
-}
-
 .media p {
-    margin-top: 0;
     margin-bottom: 16px;
-    padding: 0;
+    color: var(--white-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+.form-subscribe {
+    text-align: center;
 }
 
 .actions-footer {
@@ -878,6 +915,11 @@ span {
     display:block;
     width: 40px;
     height: 40px;
+    margin-right: 16px;
+}
+
+.social-footer:last-child {
+    margin-right: 0;
 }
 
 .social-link-footer {
@@ -898,10 +940,173 @@ span {
 }
 
 .social-footer .social-icon {
-    width: 16px;
-    height: 16px;
+    width: 24px;
+    height: 24px;
     fill: currentColor;
 }
+
+.footer-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.modal-form-input-footer {
+    margin: 0;
+}
+
+.text-form {
+    margin: 0;
+    margin-bottom: 16px;
+
+    color: var(--white-color);
+    font-size: 16px;
+    letter-spacing: 0.02em;
+}
+
+.modal-form-input-footer {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 16px;
+    max-width: 396px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    color: var(--white-color);
+    background: transparent;
+    transition: border-color var(--transition);
+}
+
+
+.modal-form-input-footer:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.modal-form-submit.submit-footer {
+    width: 165px;
+    height: 40px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 8px 24px;
+    background-image: url(../images/subscribe-icon.svg);
+    background-position:right 24px bottom 50%;
+    background-repeat: no-repeat;
+    transition: color var(--transition);
+}
+
+
+/* ADAPTIV TABLET FOOTTER*/
+
+@media screen and ( min-width: 768px) {
+    .footer .container {
+        max-width: 582px;
+    }
+
+    .footer .info, 
+    .footer .media {
+    display: flex;
+    align-items: flex-start;
+    }
+
+    .group {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 72px;
+    }
+
+    .group .info {
+        margin: 0;
+    }
+
+    footer .media {
+        margin: 0;
+    }
+
+    .media p {
+        margin-bottom: 16px;
+        margin-top: 0;
+    }
+
+    .text-form {
+        margin: 0;
+        margin-bottom: 16px;
+    
+        font-size: 16px;
+        letter-spacing: 0.02em;
+    }
+    
+    .modal-form-input-footer {
+        margin-right: 24px;
+        padding-left: 16px;
+        width: 264px;
+        height: 40px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+        color: var(--white-color);
+        background: transparent;
+        transition: border-color var(--transition);
+    }
+
+    .footer-form {
+        flex-direction: row;
+        gap: 0;
+    }
+
+    .form-subscribe {
+        text-align: start;
+    }
+}
+
+
+/* ADAPTIV DESCTOP FOOTTER*/
+
+@media screen and (min-width: 1200px) {
+    .footer .container {
+        max-width: 1158px;
+    }
+
+    .footer {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .group .info {
+        margin-right: 120px;
+    }
+
+    .group {
+        display: flex;
+        flex-wrap: nowrap;
+        column-gap: 0px;
+        row-gap: 0px;
+    }
+
+    footer .media {
+        width: 208px;
+        margin-right: 80px;
+    }
+
+    .actions-footer {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .social-footer .social-icon {
+        width: 16px;
+        height: 16px;
+        fill: currentColor;
+    }
+}
+
 
 
 /* portfolio.html____________________ 
@@ -990,15 +1195,6 @@ margin-bottom: 8px;
     margin-bottom: 0;
 }
 
-/* .activity-nav .item {
-    width: calc((100% - 48px) / 3);
-    margin-right: 24px;
-    margin-top: 48px;
-}
-
-.activity-nav:nth-child(3n) {
-    margin-right: 0;
-} */
 
 .activity-nav .card-content {
     padding: 32px 16px;
@@ -1028,19 +1224,6 @@ margin-bottom: 8px;
     overflow: hidden;
 }
 
-/* .product-thumb::before {
-    position: absolute;
-    display: inline-block;
-    content: "";
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-
-    background-color: var(--card-bg-color);
-    opacity: 0;
-} */
-
 .overlay {
     display: block;
     position: absolute;
@@ -1069,11 +1252,13 @@ margin-bottom: 8px;
     transform: translate(0, 0);
 }
 
-/* .activity-nav .link:hover .product-thumb::before {
-    opacity: 1;
-} */
 
-/* MODAL */
+
+
+/* ____________ADAPTIV MODAL______________ */
+
+/* ADAPTIV MOBILE MODAL*/
+
 .backdrop {
     position: fixed;
     top: 0;
@@ -1095,7 +1280,8 @@ margin-bottom: 8px;
 
 .modal {
     position: absolute;
-    min-width: 408px;
+    width: 100%;
+    max-width: 392px;
     min-height: 576px;
     top: 50%;
     left: 50%;
@@ -1107,41 +1293,10 @@ margin-bottom: 8px;
     border-radius: 4px;
 }
 
-/* BUTTON CLOSE */
-.close {
-    position: absolute;
-    top: 24px;
-    right: 24px;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    
-    color: #000000;
-    background-color: #E7E9FC;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    transition: color var(--transition), background-color var(--transition);
-}
-
-.close:hover ,
-.close:focus {
-    background-color: var(--card-bg-color-hover);
-    color: var(--white-color);
-}
-
-.close .close-icon {
-    width: 8px;
-    height: 8px;
-    fill: currentColor;
-}
-
-/* MODAL FORM */
 .modal-form {
-    padding: 24px;
+    padding: 16px;
     padding-top: 72px;
+    padding-bottom: 24px;
     display: flex;
     flex-direction: column;
 }
@@ -1290,47 +1445,50 @@ margin-bottom: 8px;
     background-color: var(--button-hover-portfolio);
 }
 
-.footer-form {
+
+/* BUTTON CLOSE */
+.close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
     display: flex;
-}
-
-.text-form {
-    margin: 0;
-    margin-bottom: 16px;
-
-    font-size: 16px;
-    letter-spacing: 0.02em;
-}
-
-.modal-form-input-footer {
-    margin-right: 24px;
-    padding-left: 16px;
-    width: 264px;
-    height: 40px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-    color: var(--white-color);
-    background: transparent;
-    transition: border-color var(--transition);
-}
-
-.modal-form-input-footer:focus {
-    outline: none;
-    border-color: var(--accent-color);
-}
-
-.modal-form-submit.submit-footer {
-    width: 165px;
-    height: 40px;
-    display: flex;
-    text-align: center;
+    justify-content: center;
     align-items: center;
-    padding: 8px 24px;
-    background-image: url(../images/subscribe-icon.svg);
-    background-position:right 24px bottom 50%;
-    background-repeat: no-repeat;
-    transition: color var(--transition);
+    cursor: pointer;
+    
+    color: #000000;
+    background-color: #E7E9FC;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    transition: color var(--transition), background-color var(--transition);
+}
+
+.close:hover ,
+.close:focus {
+    background-color: var(--card-bg-color-hover);
+    color: var(--white-color);
+}
+
+.close .close-icon {
+    width: 8px;
+    height: 8px;
+    fill: currentColor;
+}
+
+
+/* ADAPTIV TABLET/DESCTOP MODAL*/
+
+@media screen and (min-width: 768px) {
+    .modal {
+        min-width: 408px;
+    }
+
+    .modal-form {
+        padding: 24px;
+        padding-top: 72px;
+    }
 }
 
 
