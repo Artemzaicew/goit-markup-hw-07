@@ -63,7 +63,8 @@ img {
     padding-bottom: 24px;
 }
 
-span {
+.logo-header span,
+.logo-footer span {
     color: var(--accent-color);
 }
 
@@ -160,6 +161,8 @@ span {
     }
     .mobile-menu-container {
         position: relative;
+        top: 0;
+        left: 0;
         padding-left: 15px;
         padding-right: 15px;
         margin-left: auto;
@@ -170,10 +173,8 @@ span {
         height: 100%;
         display: flex;
         flex-direction: column;
-
-        top: 0;
-        transform: translate(-50%, 0) scale(100%);
     }
+    
     .mobile-menu-close {
         position: absolute;
         top: 24px;
@@ -241,7 +242,7 @@ span {
         letter-spacing: 0.02em;
         font-style: normal;
 
-        color: #434455;
+        color: var(--accent-color);
         text-decoration: none;
         transition: color var(--transition);
     }
@@ -387,6 +388,10 @@ span {
         padding-top: 24px;
         padding-bottom: 24px;
     }
+
+    .info-nav .link-mailto {
+    margin: 0;
+    }
 }
 
 
@@ -402,6 +407,9 @@ span {
     margin-right: auto;
     margin-left: auto;
     max-width: 428px;
+    padding-top: 112px;
+    padding-bottom: 112px;
+
     height: 432px;
 
     background-image: linear-gradient( to right, 
@@ -464,10 +472,6 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
     background-color: var(--button-hover-portfolio);
 }
 
-.hero .container {
-    padding-top: 112px;
-    padding-bottom: 112px;
-}
 
 
 /* ADAPTIV TABLET HERO */
@@ -510,6 +514,8 @@ screen and (min-resolution: 2dppx) and (min-width: 768px) {
     .hero {
         max-width: 1440px;
         height: 600px;
+        padding-top: 188px;
+        padding-bottom: 188px;
 
         background-image: linear-gradient( to right, 
         rgba(46, 47, 66, 0.7),
@@ -1337,9 +1343,11 @@ margin-bottom: 8px;
 
 .modal {
     position: absolute;
+    height: 600px; 
+    max-height: 90vh; 
+    overflow-y: scroll;
     width: 100%;
     max-width: 392px;
-    min-height: 576px;
     top: 50%;
     left: 50%;
     transform: translate( -50%, -50%);
@@ -1354,6 +1362,7 @@ margin-bottom: 8px;
     padding: 16px;
     padding-top: 72px;
     padding-bottom: 24px;
+
     display: flex;
     flex-direction: column;
 }
@@ -1500,6 +1509,12 @@ margin-bottom: 8px;
 .modal-form-submit:hover,
 .modal-form-submit:focus {
     background-color: var(--button-hover-portfolio);
+}
+
+@media screen and (max-width: 677px) {
+    .modal {
+         width: calc(100% - 2 * 15px);
+    }
 }
 
 
